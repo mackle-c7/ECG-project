@@ -1,0 +1,47 @@
+html
+  head
+    title Login Here
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js')
+  body.container
+    .page-header
+      h1 ECG 
+    nav.navbar.navbar-default
+      .container-fluid
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/dashboard') Dashboard
+            li
+              a(href='/history') History
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/logout') Log Out
+        // /.navbar-collapse
+        // /.container-fluid
+    .container.row
+      h1 Hi #{user}, Welcome to your Dashboard
+      canvas#myChart(width='100', height='20')
+  script.
+   data = [10,20]
+   var ctx = document.getElementById("myChart").getContext('2d');
+   var myChart = new Chart(document.getElementById("myChart"), {
+   type: 'line',
+   data: {
+    labels: [40,50,60,70,80,90,100,110,120,130],
+    datasets: [{ 
+        data: [#{data}],
+        label: "#{user}",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+   },
+    options: {
+     title: {
+      display: true,
+      text: 'Heart Rate Measurements'
+    }
+    }
+    });

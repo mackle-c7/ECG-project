@@ -1,0 +1,32 @@
+{
+  "name": "ecg_hosting",
+  "version": "1.0.0",
+  "description": "A site for hosting ECG data",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "chart.js": "^2.7.3",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "firebase": "^5.5.9",
+    "firebase-admin": "^6.2.0",
+    "firebase-functions": "^2.1.0",
+    "firebaseui": "^3.4.1",
+    "html": "^1.0.0",
+    "http-errors": "^1.6.3",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.3",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {},
+  "author": "Conor Mackle",
+  "license": "ISC",
+  "bin": {
+    "ecg_hosting": "www.js"
+  }
+}
